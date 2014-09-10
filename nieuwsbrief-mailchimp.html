@@ -4,7 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>*|MC:SUBJECT|*</title>
     <style type="text/css">
-        /* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+        /**
+         * Client styles
+         */
         #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
         .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
         .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
@@ -12,30 +14,42 @@
         table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
         img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
 
-        /* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+        /**
+         * Reset styles
+         */
         body{margin:0; padding:0;}
         img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
         table{border-collapse:collapse !important;}
         body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
-        /* /\/\/\/\/\/\/\/\/ TEMPLATE STYLES /\/\/\/\/\/\/\/\/ */
 
-        /* ========== Page Styles ========== */
+        /**
+         * Template styles
+         */
+        body, #bodyTable, #bodyCell {
+            font-family: Arial,sans-serif;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        #archiveCell {
+            padding: 10px 10px 0 10px;
+        }
+        #bodyCell{
+            padding:10px;
+        }
+        #templateContainer{
+            width:600px;
+            border: 1px solid #CCC;
+        }
 
-        #bodyCell{padding:20px;}
-        #templateContainer{width:600px;}
-
-        /* /\/\/\/\/\/\/\/\/ MOBILE STYLES /\/\/\/\/\/\/\/\/ */
-        @media only screen and (max-width: 480px){
-            /* /\/\/\/\/\/\/ CLIENT-SPECIFIC MOBILE STYLES /\/\/\/\/\/\/ */
+        /**
+         * Responsive styles
+         */
+        @media only screen and (max-width: 600px){
+            /* Client specific mobile styles */
             body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
             body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
 
-            /* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
-            #bodyCell{padding:10px !important;}
-
-            /* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
-
-            /* ======== Page Styles ======== */
+            /* Template styles */
             #templateContainer{
                 max-width: 600px !important;
                 width: 100% !important;
@@ -46,16 +60,28 @@
 <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
     <center>
         <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+            <tr>
+                <td align="center" valign="top" id="archiveCell">
+                    <a href="*|ARCHIVE|*" target="_blank" title="Open nieuwsbrief in browser." style="text-decoration: none; color: #454545;">Open deze mail in uw browser</a>
+                </td>
+            </tr>
+            <!-- *|END:IF|* -->
             <tr>
                 <td align="center" valign="top" id="bodyCell">
                     <table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
-                        <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                        <!-- BEGIN HEADER // -->
                         <tr>
                             <td align="center" valign="top">
-                                <a href="*|ARCHIVE|*" target="_blank" title="Open nieuwsbrief in browser." style="text-decoration: none; color: #454545;">Open deze mail in uw browser</a>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+                                    <tr>
+                                        <td valign="top" class="headerContent">
+                                        </td>
+                                    </tr>
+                                </table>
                             </td>
                         </tr>
-                        <!-- *|END:IF|* -->
+                        <!-- // END HEADER -->
 
                         <!-- BEGIN BODY // -->
                         <tr>
