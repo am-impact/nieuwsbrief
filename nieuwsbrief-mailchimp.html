@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>*|MC:SUBJECT|*</title>
     <style type="text/css">
         /**
@@ -55,6 +56,13 @@
                 width: 100% !important;
             }
         }
+
+        @media only screen and (max-width: 480px){
+            .mobile-block {
+                display: block;
+                width: auto;
+            }
+        }
     </style>
 </head>
 <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
@@ -90,7 +98,97 @@
                             <td align="center" valign="top" id="templateBody">
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
-                                        <td valign="top" class="bodyContent" mc:edit="body_content">
+                                        <td valign="top">
+
+                                            <!-- // Begin Module: Afbeelding links, content rechts \\ -->
+                                            <div mc:repeatable="image_with_content" mc:variant="content met afbeelding links">
+                                            <table cellpadding="0" cellspacing="0" width="100%" border="0" align="center">
+                                                <tr>
+                                                    <td width="44%" valign="top"><img src="http://lorempixel.com/260/170/transport/7" border="0" alt="" style="width: 100%; max-width:260px;" mc:label="260 breed" mc:edit="afbeelding_links"></td>
+                                                    <td width="4%"></td>
+                                                    <td width="52%" class="contentblock" valign="top">
+                                                        <strong class="title" mc:edit="titel">Titel blok</strong><br>
+                                                        <div class="content" mc:edit="content">
+                                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu. Phasel lus blandit magna enim ut  lorem ipsum amet Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu.
+                                                        </div>
+                                                        <div class="button" mc:hideable mc:edit="button">
+                                                            <a href="#">Lees meer</a> &rsaquo;
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            </div>
+                                            <!-- // End Module: Afbeelding links, content rechts \\ -->
+
+                                            <!-- // Begin Module: Afbeelding rechts, content link \\ -->
+                                            <div mc:repeatable="image_with_content" mc:variant="content met afbeelding rechts">
+                                            <table cellpadding="0" cellspacing="0" width="100%" border="0" align="center">
+                                                <tr>
+                                                    <td width="52%" class="contentblock" valign="top">
+                                                        <strong class="title" mc:edit="titel">Titel blok</strong><br>
+                                                        <div class="content" mc:edit="content">
+                                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu. Phasel lus blandit magna enim ut  lorem ipsum amet Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu.
+                                                        </div>
+                                                        <div class="button" mc:hideable mc:edit="button">
+                                                            <a href="#">Lees meer</a> &rsaquo;
+                                                        </div>
+                                                    </td>
+                                                    <td width="4%"></td>
+                                                    <td width="44%" valign="top"><img src="http://lorempixel.com/260/170/transport/7" border="0" alt="" style="width: 100%; max-width:260px;" mc:label="260 breed" mc:edit="afbeelding_rechts"></td>
+                                                </tr>
+                                            </table>
+                                            </div>
+                                            <!-- // End Module: Afbeelding rechts, content links \\ -->
+
+                                            <!-- // Begin Module: 2 blokken \\ -->
+                                            <div mc:repeatable="image_with_content" mc:variant="2 blokken">
+                                                <table cellpadding="0" cellspacing="0" width="100%" border="0" align="center">
+                                                    <tr>
+                                                        <td width="44%" valign="top" class="mobile-block">
+                                                            <strong class="title" mc:edit="titel_links">Titel blok</strong><br>
+                                                            <div><img src="http://lorempixel.com/260/170/transport/7" border="0" alt="" style="width: 100%; max-width:260px;" mc:label="260 breed" mc:edit="afbeelding_links"></div>
+                                                            <div class="content" mc:edit="content_links">
+                                                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu. Phasel lus blandit magna enim ut  lorem ipsum amet Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu.
+                                                            </div>
+                                                            <div class="button" mc:hideable mc:edit="button_links">
+                                                                <a href="#">Lees meer</a> &rsaquo;
+                                                            </div>
+                                                        </td>
+                                                        <td width="12%" class="mobile-block"></td>
+                                                        <td width="44%" valign="top" class="mobile-block">
+                                                            <strong class="title" mc:edit="titel_rechts">Titel blok</strong><br>
+                                                            <div><img src="http://lorempixel.com/260/170/transport/7" border="0" alt="" style="width: 100%; max-width:260px;" mc:label="260 breed" mc:edit="afbeelding_rechts"></div>
+                                                            <div class="content" mc:edit="content_rechts">
+                                                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu. Phasel lus blandit magna enim ut  lorem ipsum amet Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu.
+                                                            </div>
+                                                            <div class="button" mc:hideable mc:edit="button_rechts">
+                                                                <a href="#">Lees meer</a> &rsaquo;
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <!-- // End Module: 2 blokken \\ -->
+
+                                            <!-- // Begin Module: Breed \\ -->
+                                            <div mc:repeatable="image_with_content" mc:variant="breed">
+                                            <table cellpadding="0" cellspacing="0" width="100%" border="0" align="center">
+                                                <tr>
+                                                    <td width="100%" valign="top">
+                                                        <strong class="title" mc:edit="titel">Titel blok</strong><br>
+                                                        <div><img src="http://lorempixel.com/600/170/transport/7" border="0" alt="" style="width: 100%; max-width:600px;" mc:label="600 breed" mc:edit="afbeelding"></div>
+                                                        <div class="content" mc:edit="content">
+                                                        Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu. Phasel lus blandit magna enim ut  lorem ipsum amet Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu.
+                                                        </div>
+                                                        <div class="button" mc:hideable mc:edit="button">
+                                                            <a href="#">Lees meer</a> &rsaquo;
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            </div>
+                                            <!-- // End Module: Breed \\ -->
+
                                         </td>
                                     </tr>
                                 </table>
