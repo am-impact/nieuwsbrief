@@ -21,7 +21,7 @@
         body{margin:0; padding:0;}
         img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
         table{border-collapse:collapse !important;}
-        body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+        body,.bodytable{height:100% !important; margin:0; padding:0; width:100% !important;}
 
         img {
             max-width: 100%;
@@ -31,19 +31,18 @@
         /**
          * Template styles
          */
-        body, #bodyTable, #bodyCell {
+        body, .bodytable {
             font-family: Arial,sans-serif;
             font-size: 12px;
             line-height: 18px;
         }
-        #archiveCell {
+
+        .archive {
             padding: 10px 10px 0 10px;
         }
-        #bodyCell{
-            padding:10px;
-        }
-        #templateContainer{
-            width:600px;
+
+        .container {
+            width: 600px;
             border: 1px solid #CCC;
         }
 
@@ -56,7 +55,7 @@
             body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
 
             /* Template styles */
-            #templateContainer{
+            .container {
                 max-width: 600px !important;
                 width: 100% !important;
             }
@@ -74,23 +73,23 @@
     <!-- Ruimte voor snippet: http://www.dutchcowboys.nl/email/gebruik-altijd-een-snippet-in-commerciele-en-informatieve-e-mails -->
     <div style="display: none !important; visibility: hidden !important; font-size: 1px; color: #FFFFFF; line-height: 1px; max-height: 0px; max-width: 0px; overflow: hidden;"></div>
     <center>
-        <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" class="bodytable">
             <!-- *|IFNOT:ARCHIVE_PAGE|* -->
             <tr>
-                <td align="center" valign="top" id="archiveCell">
+                <td align="center" valign="top" class="archive">
                     <a href="*|ARCHIVE|*" target="_blank" title="Open nieuwsbrief in browser." style="text-decoration: none; color: #454545;">Open deze mail in uw browser</a>
                 </td>
             </tr>
             <!-- *|END:IF|* -->
             <tr>
-                <td align="center" valign="top" id="bodyCell">
-                    <table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
+                <td align="center" valign="top">
+                    <table border="0" cellpadding="0" cellspacing="0" class="container">
                         <!-- BEGIN HEADER // -->
                         <tr>
-                            <td align="center" valign="top" id="templateHeader">
+                            <td align="center" valign="top">
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
-                                        <td valign="top" class="headerContent">
+                                        <td valign="top">
                                         </td>
                                     </tr>
                                 </table>
@@ -100,7 +99,7 @@
 
                         <!-- BEGIN BODY // -->
                         <tr>
-                            <td align="center" valign="top" id="templateBody">
+                            <td align="center" valign="top">
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
                                         <td valign="top">
@@ -109,9 +108,9 @@
                                             <div mc:repeatable="image_with_content" mc:variant="content met afbeelding links">
                                             <table cellpadding="0" cellspacing="0" width="100%" border="0" align="center">
                                                 <tr>
-                                                    <td width="44%" valign="top"><img src="http://lorempixel.com/260/170/transport/7" border="0" alt="" style="width: 100%; max-width:260px;" mc:label="260 breed" mc:edit="afbeelding_links"></td>
-                                                    <td width="4%"></td>
-                                                    <td width="52%" class="contentblock" valign="top">
+                                                    <td class="mobile-block" width="44%" valign="top"><img src="http://lorempixel.com/260/170/transport/7" border="0" alt="" style="width: 100%; max-width:260px;" mc:label="260 breed" mc:edit="afbeelding_links"></td>
+                                                    <td class="mobile-block" width="4%"></td>
+                                                    <td class="mobile-block" width="52%" valign="top">
                                                         <strong class="title" mc:edit="titel">Titel blok</strong><br>
                                                         <div class="content" mc:edit="content">
                                                         Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu. Phasel lus blandit magna enim ut  lorem ipsum amet Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu.
@@ -129,7 +128,7 @@
                                             <div mc:repeatable="image_with_content" mc:variant="content met afbeelding rechts">
                                             <table cellpadding="0" cellspacing="0" width="100%" border="0" align="center">
                                                 <tr>
-                                                    <td width="52%" class="contentblock" valign="top">
+                                                    <td class="mobile-block" width="52%" valign="top">
                                                         <strong class="title" mc:edit="titel">Titel blok</strong><br>
                                                         <div class="content" mc:edit="content">
                                                         Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu. Phasel lus blandit magna enim ut  lorem ipsum amet Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut vel metus arcu.
@@ -138,8 +137,8 @@
                                                             <a href="#">Lees meer</a> &rsaquo;
                                                         </div>
                                                     </td>
-                                                    <td width="4%"></td>
-                                                    <td width="44%" valign="top"><img src="http://lorempixel.com/260/170/transport/7" border="0" alt="" style="width: 100%; max-width:260px;" mc:label="260 breed" mc:edit="afbeelding_rechts"></td>
+                                                    <td class="mobile-block" width="4%"></td>
+                                                    <td class="mobile-block" width="44%" valign="top"><img src="http://lorempixel.com/260/170/transport/7" border="0" alt="" style="width: 100%; max-width:260px;" mc:label="260 breed" mc:edit="afbeelding_rechts"></td>
                                                 </tr>
                                             </table>
                                             </div>
@@ -203,10 +202,10 @@
 
                         <!-- BEGIN FOOTER // -->
                         <tr>
-                            <td align="center" valign="top" id="templateFooter">
+                            <td align="center" valign="top">
                                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                                     <tr>
-                                        <td valign="top" class="footerContent">
+                                        <td valign="top">
                                             <a href="*|UNSUB|*" style="color: #333333;">Klik hier</a> om u af te melden voor onze nieuwsbrief
                                         </td>
                                     </tr>
